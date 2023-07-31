@@ -406,6 +406,8 @@ class AgilentIRFile:
             self._totalspectrum = self._data
 
         self._file_has_been_read = True
+        
+        return self._data
 
     def _generate_hdf5_metadata(self) -> dict[str, any]:
         """Return a `dict` containing metadata parameters that can be used for the HDF5 file format.
