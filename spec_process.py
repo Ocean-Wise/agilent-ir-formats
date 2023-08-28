@@ -15,7 +15,7 @@ def bgF(p):
 
 def proc(p, smoothing_window, smoothing_order, data_wavenos, library_wavenos):
     p_bgF = (np.array(p)-np.array(smoother(p,1001,2))) 
-    p_int = np.interp(library_wavenos,data_wavenos[10:],p_bgF[10:]) 
+    p_int = np.interp(library_wavenos,data_wavenos[20:],p_bgF[20:]) 
     p_smt = sgf(p_int, smoothing_window, smoothing_order) 
     p_der = deriv(p_smt,2)
     pnoise = p_der-smoother(p_der,smoothing_window, smoothing_order)
