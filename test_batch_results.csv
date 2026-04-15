@@ -1,0 +1,225 @@
+label,polymer,best_pr,pixel_count,dmt_file,area_um2,area_mm2
+1,unresolved polyethylene (low confidence),0.2817018615787382,30885.0,uog-2-q4.dmt,126504960.0,126.50496
+2,polyamide (low confidence),0.049912182929734955,9.0,uog-2-q4.dmt,36864.0,0.036864
+3,polyethylene (low confidence),0.2651833051997836,7.0,uog-2-q4.dmt,28672.0,0.028672
+4,polyethylene,0.39746861048499704,95.0,uog-2-q4.dmt,389120.0,0.38912
+5,polyethylene (low confidence),0.14144831202653232,25.0,uog-2-q4.dmt,102400.0,0.1024
+6,unresolved polyethylene (low confidence),0.12321950356994008,5.0,uog-2-q4.dmt,20480.0,0.02048
+7,small particle,0.0,1.0,uog-2-q4.dmt,4096.0,0.004096
+8,unresolved polyethylene (low confidence),0.06149715260671456,7.0,uog-2-q4.dmt,28672.0,0.028672
+9,polyurethane (low confidence),0.04469082839482503,17.0,uog-2-q4.dmt,69632.0,0.069632
+10,small particle,0.0,1.0,uog-2-q4.dmt,4096.0,0.004096
+11,acrylic (low confidence),0.12175415148912229,55.0,uog-2-q4.dmt,225280.0,0.22528
+12,polyamide (low confidence),0.17088140765303217,109.0,uog-2-q4.dmt,446464.0,0.446464
+13,small particle,0.0,3.0,uog-2-q4.dmt,12288.0,0.012288
+14,small particle,0.0,1.0,uog-2-q4.dmt,4096.0,0.004096
+15,polycarbonate (low confidence),0.09363391352400403,26.0,uog-2-q4.dmt,106496.0,0.106496
+16,acrylic (low confidence),0.18555466180860558,669.0,uog-2-q4.dmt,2740224.0,2.740224
+17,polypropylene,0.3972189608418898,14.0,uog-2-q4.dmt,57344.0,0.057344
+18,small particle,0.0,4.0,uog-2-q4.dmt,16384.0,0.016384
+19,small particle,0.0,2.0,uog-2-q4.dmt,8192.0,0.008192
+20,small particle,0.0,4.0,uog-2-q4.dmt,16384.0,0.016384
+21,polycarbonate (low confidence),0.041204174213227175,6.0,uog-2-q4.dmt,24576.0,0.024576
+22,small particle,0.0,2.0,uog-2-q4.dmt,8192.0,0.008192
+23,polyurethane (low confidence),0.046220872011391835,14.0,uog-2-q4.dmt,57344.0,0.057344
+24,small particle,0.0,1.0,uog-2-q4.dmt,4096.0,0.004096
+25,unresolved polyethylene (low confidence),0.18453111607718387,16.0,uog-2-q4.dmt,65536.0,0.065536
+26,poly(vinyl alcohol) (low confidence),0.044050480868468814,6.0,uog-2-q4.dmt,24576.0,0.024576
+27,small particle,0.0,1.0,uog-2-q4.dmt,4096.0,0.004096
+28,small particle,0.0,1.0,uog-2-q4.dmt,4096.0,0.004096
+29,polyester/alkyd,0.4438525033135564,1753.0,uog-2-q4.dmt,7180288.0,7.180288
+30,poly(vinyl alcohol) (low confidence),0.07126748431431898,13.0,uog-2-q4.dmt,53248.0,0.053248
+31,polyethylene,0.500404648680784,21.0,uog-2-q4.dmt,86016.0,0.086016
+32,small particle,0.0,4.0,uog-2-q4.dmt,16384.0,0.016384
+33,small particle,0.0,4.0,uog-2-q4.dmt,16384.0,0.016384
+34,poly(2 6 dimethyl p phenylene oxide) (low confidence),0.03416142673180282,5.0,uog-2-q4.dmt,20480.0,0.02048
+35,polylactic acid (low confidence),0.042818393680239084,139.0,uog-2-q4.dmt,569344.0,0.569344
+36,cellulose (low confidence),0.07788226841897773,7.0,uog-2-q4.dmt,28672.0,0.028672
+37,polyethylene (low confidence),0.08497726435522199,8.0,uog-2-q4.dmt,32768.0,0.032768
+38,small particle,0.0,2.0,uog-2-q4.dmt,8192.0,0.008192
+39,small particle,0.0,1.0,uog-2-q4.dmt,4096.0,0.004096
+40,chitin (low confidence),0.08175156204404316,18.0,uog-2-q4.dmt,73728.0,0.073728
+41,small particle,0.0,1.0,uog-2-q4.dmt,4096.0,0.004096
+42,polylactic acid (low confidence),0.024134717608625723,19.0,uog-2-q4.dmt,77824.0,0.077824
+43,cellulose (low confidence),0.10630547406683448,81.0,uog-2-q4.dmt,331776.0,0.331776
+44,poly(phenylene sulfide) (low confidence),0.05798721328115226,40.0,uog-2-q4.dmt,163840.0,0.16384
+45,silica (low confidence),0.05511435468419957,8.0,uog-2-q4.dmt,32768.0,0.032768
+46,polypropylene (low confidence),0.20839329096918463,303.0,uog-2-q4.dmt,1241088.0,1.241088
+47,small particle,0.0,1.0,uog-2-q4.dmt,4096.0,0.004096
+48,polysulfone (low confidence),0.03469428895445926,8.0,uog-2-q4.dmt,32768.0,0.032768
+49,polyester,0.3520202226964211,19.0,uog-2-q4.dmt,77824.0,0.077824
+50,unresolved polyethylene (low confidence),0.18732143199234927,31.0,uog-2-q4.dmt,126976.0,0.126976
+51,acrylic,0.3609358587939913,1619.0,uog-2-q4.dmt,6631424.0,6.631424
+52,polyethylene,0.30828566793843126,10.0,uog-2-q4.dmt,40960.0,0.04096
+53,polyurethane (low confidence),0.029491099421783826,18.0,uog-2-q4.dmt,73728.0,0.073728
+54,polypropylene (low confidence),0.050544635501226017,9.0,uog-2-q4.dmt,36864.0,0.036864
+55,small particle,0.0,1.0,uog-2-q4.dmt,4096.0,0.004096
+56,unresolved polyethylene (low confidence),0.12068482585646467,6.0,uog-2-q4.dmt,24576.0,0.024576
+57,small particle,0.0,1.0,uog-2-q4.dmt,4096.0,0.004096
+58,small particle,0.0,1.0,uog-2-q4.dmt,4096.0,0.004096
+59,small particle,0.0,4.0,uog-2-q4.dmt,16384.0,0.016384
+60,small particle,0.0,2.0,uog-2-q4.dmt,8192.0,0.008192
+61,unresolved polyethylene (low confidence),0.05174551740667935,123.0,uog-2-q4.dmt,503808.0,0.503808
+62,small particle,0.0,2.0,uog-2-q4.dmt,8192.0,0.008192
+63,small particle,0.0,2.0,uog-2-q4.dmt,8192.0,0.008192
+64,unknown polymer (low confidence),0.03131020424484435,11.0,uog-2-q4.dmt,45056.0,0.045056
+65,unresolved polyethylene (low confidence),0.08211585895528789,6.0,uog-2-q4.dmt,24576.0,0.024576
+66,small particle,0.0,3.0,uog-2-q4.dmt,12288.0,0.012288
+67,small particle,0.0,2.0,uog-2-q4.dmt,8192.0,0.008192
+68,small particle,0.0,1.0,uog-2-q4.dmt,4096.0,0.004096
+69,small particle,0.0,2.0,uog-2-q4.dmt,8192.0,0.008192
+70,small particle,0.0,4.0,uog-2-q4.dmt,16384.0,0.016384
+71,unresolved polyethylene (low confidence),0.04911834599536863,6.0,uog-2-q4.dmt,24576.0,0.024576
+72,small particle,0.0,3.0,uog-2-q4.dmt,12288.0,0.012288
+73,small particle,0.0,2.0,uog-2-q4.dmt,8192.0,0.008192
+74,polychloroprene (low confidence),0.10748293501161056,74.0,uog-2-q4.dmt,303104.0,0.303104
+75,small particle,0.0,1.0,uog-2-q4.dmt,4096.0,0.004096
+76,polyester/alkyd (low confidence),0.2482746122100666,35.0,uog-2-q4.dmt,143360.0,0.14336
+77,small particle,0.0,1.0,uog-2-q4.dmt,4096.0,0.004096
+78,small particle,0.0,1.0,uog-2-q4.dmt,4096.0,0.004096
+79,polyethylene,0.39561352447019127,52.0,uog-2-q4.dmt,212992.0,0.212992
+80,polyvinyl chloride (low confidence),0.22345347187177933,110.0,uog-2-q4.dmt,450560.0,0.45056
+81,polyvinyl chloride (low confidence),0.09275723611982586,82.0,uog-2-q4.dmt,335872.0,0.335872
+82,small particle,0.0,1.0,uog-2-q4.dmt,4096.0,0.004096
+83,unresolved polyethylene (low confidence),0.14550063609298383,14.0,uog-2-q4.dmt,57344.0,0.057344
+84,cellulose,0.44243583977395834,68.0,uog-2-q4.dmt,278528.0,0.278528
+85,small particle,0.0,2.0,uog-2-q4.dmt,8192.0,0.008192
+86,small particle,0.0,3.0,uog-2-q4.dmt,12288.0,0.012288
+87,unresolved polyethylene (low confidence),0.13791658750969907,11.0,uog-2-q4.dmt,45056.0,0.045056
+88,small particle,0.0,2.0,uog-2-q4.dmt,8192.0,0.008192
+89,polyethylene,0.38806778318864543,97.0,uog-2-q4.dmt,397312.0,0.397312
+90,polyethylene (low confidence),0.2802525418693137,37.0,uog-2-q4.dmt,151552.0,0.151552
+91,small particle,0.0,1.0,uog-2-q4.dmt,4096.0,0.004096
+92,cellulose (low confidence),0.058418853267602676,14.0,uog-2-q4.dmt,57344.0,0.057344
+93,small particle,0.0,4.0,uog-2-q4.dmt,16384.0,0.016384
+94,polyacrylamide (low confidence),0.03488148798954346,11.0,uog-2-q4.dmt,45056.0,0.045056
+95,silica (low confidence),0.1481801225563122,69.0,uog-2-q4.dmt,282624.0,0.282624
+96,polyvinylidene fluoride (low confidence),0.10143477327407972,64.0,uog-2-q4.dmt,262144.0,0.262144
+97,small particle,0.0,1.0,uog-2-q4.dmt,4096.0,0.004096
+98,polyethylene (low confidence),0.1842282221608865,35.0,uog-2-q4.dmt,143360.0,0.14336
+99,small particle,0.0,1.0,uog-2-q4.dmt,4096.0,0.004096
+100,coal (low confidence),0.14341748953125588,238.0,uog-2-q4.dmt,974848.0,0.974848
+101,silica (low confidence),0.09682522469375171,20.0,uog-2-q4.dmt,81920.0,0.08192
+102,silica (low confidence),0.049556308854430256,20.0,uog-2-q4.dmt,81920.0,0.08192
+103,polysulfone (low confidence),0.03491739990694459,10.0,uog-2-q4.dmt,40960.0,0.04096
+104,unresolved polyethylene (low confidence),0.2367914660740094,14.0,uog-2-q4.dmt,57344.0,0.057344
+105,unresolved polyethylene (low confidence),0.10984826379515825,11.0,uog-2-q4.dmt,45056.0,0.045056
+106,acrylic (low confidence),0.28837226058680815,100.0,uog-2-q4.dmt,409600.0,0.4096
+107,unresolved polyethylene (low confidence),0.19707925654811936,6.0,uog-2-q4.dmt,24576.0,0.024576
+108,small particle,0.0,2.0,uog-2-q4.dmt,8192.0,0.008192
+109,acrylic (low confidence),0.16728650114326113,376.0,uog-2-q4.dmt,1540096.0,1.540096
+110,small particle,0.0,1.0,uog-2-q4.dmt,4096.0,0.004096
+111,small particle,0.0,1.0,uog-2-q4.dmt,4096.0,0.004096
+112,unresolved polyethylene (low confidence),0.05435074348430393,8.0,uog-2-q4.dmt,32768.0,0.032768
+113,unresolved polyethylene (low confidence),0.06409575998759721,14.0,uog-2-q4.dmt,57344.0,0.057344
+114,polyester/alkyd (low confidence),0.08310387299925272,33.0,uog-2-q4.dmt,135168.0,0.135168
+115,small particle,0.0,1.0,uog-2-q4.dmt,4096.0,0.004096
+116,small particle,0.0,1.0,uog-2-q4.dmt,4096.0,0.004096
+117,chitin (low confidence),0.07443001251654602,19.0,uog-2-q4.dmt,77824.0,0.077824
+118,small particle,0.0,2.0,uog-2-q4.dmt,8192.0,0.008192
+119,unresolved polyethylene (low confidence),0.13427746393460696,11.0,uog-2-q4.dmt,45056.0,0.045056
+120,cellulose (low confidence),0.1107046080517197,29.0,uog-2-q4.dmt,118784.0,0.118784
+121,acrylic (low confidence),0.22823037430922716,93.0,uog-2-q4.dmt,380928.0,0.380928
+122,small particle,0.0,1.0,uog-2-q4.dmt,4096.0,0.004096
+123,small particle,0.0,1.0,uog-2-q4.dmt,4096.0,0.004096
+124,small particle,0.0,2.0,uog-2-q4.dmt,8192.0,0.008192
+125,polylactic acid (low confidence),0.02860885157893039,7.0,uog-2-q4.dmt,28672.0,0.028672
+126,phenoxy resin (low confidence),0.042587803615250684,5.0,uog-2-q4.dmt,20480.0,0.02048
+127,small particle,0.0,4.0,uog-2-q4.dmt,16384.0,0.016384
+128,small particle,0.0,1.0,uog-2-q4.dmt,4096.0,0.004096
+129,polyacrylamide (low confidence),0.258710440453124,8.0,uog-2-q4.dmt,32768.0,0.032768
+130,aramid (low confidence),0.028709661739332298,5.0,uog-2-q4.dmt,20480.0,0.02048
+131,small particle,0.0,1.0,uog-2-q4.dmt,4096.0,0.004096
+132,small particle,0.0,1.0,uog-2-q4.dmt,4096.0,0.004096
+133,small particle,0.0,1.0,uog-2-q4.dmt,4096.0,0.004096
+134,small particle,0.0,2.0,uog-2-q4.dmt,8192.0,0.008192
+135,small particle,0.0,1.0,uog-2-q4.dmt,4096.0,0.004096
+136,small particle,0.0,4.0,uog-2-q4.dmt,16384.0,0.016384
+137,unresolved polyethylene (low confidence),0.06439592757740474,11.0,uog-2-q4.dmt,45056.0,0.045056
+138,cellulose,0.5244492388745153,165.0,uog-2-q4.dmt,675840.0,0.67584
+139,silica (low confidence),0.051637847467567805,11.0,uog-2-q4.dmt,45056.0,0.045056
+140,unresolved polyethylene (low confidence),0.15200840909878083,19.0,uog-2-q4.dmt,77824.0,0.077824
+141,small particle,0.0,3.0,uog-2-q4.dmt,12288.0,0.012288
+142,small particle,0.0,1.0,uog-2-q4.dmt,4096.0,0.004096
+143,polyvinylidene fluoride (low confidence),0.12475080047338846,20.0,uog-2-q4.dmt,81920.0,0.08192
+144,poly(phenylene sulfide) (low confidence),0.058979271141919705,6.0,uog-2-q4.dmt,24576.0,0.024576
+145,aramid (low confidence),0.02295762300021805,8.0,uog-2-q4.dmt,32768.0,0.032768
+146,small particle,0.0,1.0,uog-2-q4.dmt,4096.0,0.004096
+147,PTFE (low confidence),0.18445454543615533,162.0,uog-2-q4.dmt,663552.0,0.663552
+148,silica (low confidence),0.18446818230923787,25.0,uog-2-q4.dmt,102400.0,0.1024
+149,polypropylene (low confidence),0.01985739197154918,5.0,uog-2-q4.dmt,20480.0,0.02048
+150,polypropylene (low confidence),0.12784160904510336,18.0,uog-2-q4.dmt,73728.0,0.073728
+151,polyamide (low confidence),0.20510873374345795,13.0,uog-2-q4.dmt,53248.0,0.053248
+152,polycarbonate (low confidence),0.028237704008359947,23.0,uog-2-q4.dmt,94208.0,0.094208
+153,unresolved polyethylene (low confidence),0.07389250952762863,11.0,uog-2-q4.dmt,45056.0,0.045056
+154,small particle,0.0,1.0,uog-2-q4.dmt,4096.0,0.004096
+155,unresolved polyethylene (low confidence),0.1401116494579622,5.0,uog-2-q4.dmt,20480.0,0.02048
+156,small particle,0.0,2.0,uog-2-q4.dmt,8192.0,0.008192
+157,small particle,0.0,3.0,uog-2-q4.dmt,12288.0,0.012288
+158,poly(phenylene sulfide) (low confidence),0.031410340850457324,7.0,uog-2-q4.dmt,28672.0,0.028672
+159,small particle,0.0,3.0,uog-2-q4.dmt,12288.0,0.012288
+160,unresolved polyethylene (low confidence),0.10576005690534407,8.0,uog-2-q4.dmt,32768.0,0.032768
+161,small particle,0.0,1.0,uog-2-q4.dmt,4096.0,0.004096
+162,polyethylene (low confidence),0.06045161498864269,29.0,uog-2-q4.dmt,118784.0,0.118784
+163,polyacrylamide (low confidence),0.03596800781969159,19.0,uog-2-q4.dmt,77824.0,0.077824
+164,small particle,0.0,1.0,uog-2-q4.dmt,4096.0,0.004096
+165,acrylic (low confidence),0.17655304351333334,86.0,uog-2-q4.dmt,352256.0,0.352256
+166,polyamide (low confidence),0.10409384475952925,25.0,uog-2-q4.dmt,102400.0,0.1024
+167,poly(vinyl alcohol) (low confidence),0.07714891674645086,26.0,uog-2-q4.dmt,106496.0,0.106496
+168,small particle,0.0,1.0,uog-2-q4.dmt,4096.0,0.004096
+169,unresolved polyethylene (low confidence),0.2352241856710252,36.0,uog-2-q4.dmt,147456.0,0.147456
+170,small particle,0.0,2.0,uog-2-q4.dmt,8192.0,0.008192
+171,coal (low confidence),0.10194066045998268,46.0,uog-2-q4.dmt,188416.0,0.188416
+172,polyester/alkyd,0.4128517701829225,105.0,uog-2-q4.dmt,430080.0,0.43008
+173,small particle,0.0,3.0,uog-2-q4.dmt,12288.0,0.012288
+174,small particle,0.0,2.0,uog-2-q4.dmt,8192.0,0.008192
+175,polystyrene,0.44791036586571087,107.0,uog-2-q4.dmt,438272.0,0.438272
+176,unresolved polyethylene (low confidence),0.053257795876637676,5.0,uog-2-q4.dmt,20480.0,0.02048
+177,polyamide (low confidence),0.26631306217860723,17.0,uog-2-q4.dmt,69632.0,0.069632
+178,polyethylene (low confidence),0.05287025885924164,12.0,uog-2-q4.dmt,49152.0,0.049152
+179,small particle,0.0,2.0,uog-2-q4.dmt,8192.0,0.008192
+180,small particle,0.0,4.0,uog-2-q4.dmt,16384.0,0.016384
+181,small particle,0.0,3.0,uog-2-q4.dmt,12288.0,0.012288
+182,small particle,0.0,1.0,uog-2-q4.dmt,4096.0,0.004096
+183,small particle,0.0,3.0,uog-2-q4.dmt,12288.0,0.012288
+184,polypropylene (low confidence),0.10112692032849487,23.0,uog-2-q4.dmt,94208.0,0.094208
+185,polyvinyl chloride,0.36663150355083407,162.0,uog-2-q4.dmt,663552.0,0.663552
+186,polyethylene,0.3712144029530304,139.0,uog-2-q4.dmt,569344.0,0.569344
+187,poly(2 6 dimethyl p phenylene oxide) (low confidence),0.05967120188997439,74.0,uog-2-q4.dmt,303104.0,0.303104
+188,small particle,0.0,1.0,uog-2-q4.dmt,4096.0,0.004096
+189,small particle,0.0,2.0,uog-2-q4.dmt,8192.0,0.008192
+190,small particle,0.0,1.0,uog-2-q4.dmt,4096.0,0.004096
+191,small particle,0.0,2.0,uog-2-q4.dmt,8192.0,0.008192
+192,small particle,0.0,2.0,uog-2-q4.dmt,8192.0,0.008192
+193,small particle,0.0,1.0,uog-2-q4.dmt,4096.0,0.004096
+194,poly(ethylene glycol) (low confidence),0.019045883555290983,7.0,uog-2-q4.dmt,28672.0,0.028672
+195,small particle,0.0,4.0,uog-2-q4.dmt,16384.0,0.016384
+196,small particle,0.0,1.0,uog-2-q4.dmt,4096.0,0.004096
+197,small particle,0.0,2.0,uog-2-q4.dmt,8192.0,0.008192
+198,small particle,0.0,2.0,uog-2-q4.dmt,8192.0,0.008192
+199,small particle,0.0,2.0,uog-2-q4.dmt,8192.0,0.008192
+200,small particle,0.0,1.0,uog-2-q4.dmt,4096.0,0.004096
+201,acrylonitrile butadiene (low confidence),0.035847131016795215,9.0,uog-2-q4.dmt,36864.0,0.036864
+202,small particle,0.0,4.0,uog-2-q4.dmt,16384.0,0.016384
+203,cellulose,0.33720070497776683,149.0,uog-2-q4.dmt,610304.0,0.610304
+204,polystyrene (low confidence),0.05493531239055987,35.0,uog-2-q4.dmt,143360.0,0.14336
+205,small particle,0.0,4.0,uog-2-q4.dmt,16384.0,0.016384
+206,small particle,0.0,2.0,uog-2-q4.dmt,8192.0,0.008192
+207,silica (low confidence),0.053774394685631714,8.0,uog-2-q4.dmt,32768.0,0.032768
+208,polystyrene (low confidence),0.03936272443394294,5.0,uog-2-q4.dmt,20480.0,0.02048
+209,small particle,0.0,2.0,uog-2-q4.dmt,8192.0,0.008192
+210,small particle,0.0,2.0,uog-2-q4.dmt,8192.0,0.008192
+211,small particle,0.0,1.0,uog-2-q4.dmt,4096.0,0.004096
+212,small particle,0.0,1.0,uog-2-q4.dmt,4096.0,0.004096
+213,polyamide (low confidence),0.22480884083287533,13.0,uog-2-q4.dmt,53248.0,0.053248
+214,polyethylene (low confidence),0.11010650755522407,25.0,uog-2-q4.dmt,102400.0,0.1024
+215,small particle,0.0,4.0,uog-2-q4.dmt,16384.0,0.016384
+216,small particle,0.0,1.0,uog-2-q4.dmt,4096.0,0.004096
+217,polyethylene (low confidence),0.16670963044355727,45.0,uog-2-q4.dmt,184320.0,0.18432
+218,small particle,0.0,3.0,uog-2-q4.dmt,12288.0,0.012288
+219,small particle,0.0,1.0,uog-2-q4.dmt,4096.0,0.004096
+220,small particle,0.0,1.0,uog-2-q4.dmt,4096.0,0.004096
+221,unresolved polyethylene (low confidence),0.04341205129322952,10.0,uog-2-q4.dmt,40960.0,0.04096
+222,small particle,0.0,4.0,uog-2-q4.dmt,16384.0,0.016384
+223,unresolved polyethylene (low confidence),0.04047104103545443,5.0,uog-2-q4.dmt,20480.0,0.02048
+224,unresolved polyethylene (low confidence),0.04787895624931197,8.0,uog-2-q4.dmt,32768.0,0.032768

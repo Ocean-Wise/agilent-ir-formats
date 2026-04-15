@@ -40,7 +40,7 @@ Static methods:
     version()       the version number of this code.
 ```
 
-## Simplified Morphology + Spectroscopy Analysis
+## Simplified Morphology + Spectroscopy  in Batch
 
 This repository includes a batch processing script for automated microplastic particle analysis from Agilent IR hyperspectral data.
 
