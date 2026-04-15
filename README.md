@@ -40,6 +40,69 @@ Static methods:
     version()       the version number of this code.
 ```
 
+## Simplified Morphology + Spectroscopy Analysis
+
+This repository includes a batch processing script for automated microplastic particle analysis from Agilent IR hyperspectral data.
+
+### Features
+
+- **Batch Processing**: Automatically finds and processes all .dmt files in a directory
+- **Smart Thresholding**: Uses `mean + 2*std` for robust particle segmentation
+- **Spectral Analysis**: PCA-based spectrum reduction and polymer identification
+- **Physical Measurements**: Converts pixel counts to actual area (μm² and mm²)
+- **Multi-file Support**: Processes multiple .dmt files and combines results
+
+### Configuration
+
+Edit the `DEFAULT_DATA_PATH` variable at the top of `batch_simplified_morphology_analysis.py`:
+
+```python
+# Set your default directory path here (change this to your local drive path)
+DEFAULT_DATA_PATH = r"C:\Users\Stephanie.Wang\Downloads"  # Modify this path
+```
+
+### Quick Start
+
+#### Option 1: Double-click launcher (Windows)
+1. Double-click `run_analysis.bat`
+2. Press Enter to use the default path, or enter a custom directory path
+3. Wait for processing to complete
+
+#### Option 2: Command line
+```bash
+# Use default path (press Enter when prompted)
+python batch_simplified_morphology_analysis.py
+
+# Process all .dmt files in a directory (output saved to that directory)
+python batch_simplified_morphology_analysis.py --input "C:\path\to\directory"
+
+# Process a single file
+python batch_simplified_morphology_analysis.py --input "C:\path\to\file.dmt"
+
+# Custom output location
+python batch_simplified_morphology_analysis.py --input "C:\data" --output "C:\results\my_results.csv"
+```
+
+### Output Format
+
+The CSV output includes:
+- `dmt_file`: Name of the source .dmt file
+- `label`: Particle ID within that file
+- `polymer`: Identified polymer type
+- `best_pr`: Confidence score (0-1)
+- `pixel_count`: Number of pixels in the particle
+- `area_um2`: Physical area in square microns
+- `area_mm2`: Physical area in square millimeters
+
+### Algorithm Details
+
+1. **Data Loading**: Extracts hyperspectral cube and total absorbance image
+2. **Thresholding**: `threshold = mean(image) + 2 * std(image)`
+3. **Segmentation**: Connected component analysis to identify particles
+4. **Spectral Processing**: PCA reduction to representative spectrum per particle
+5. **Identification**: Correlation matching against polymer library
+6. **Area Calculation**: Pixel count × (pixel_size)² where pixel_size = 64 μm
+
 ## Usage ##
 ### Example 1 ###
 Open a file and display simple metadata. 
