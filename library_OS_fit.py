@@ -23,7 +23,10 @@ def get_spec(name):
     return OS_sps.loc[:,name]
 
 def catID(k):
-    return (OS_meta_ix[OS_meta_ix['index'] == k]['simplified_names']).values[0]
+    matches = OS_meta_ix[OS_meta_ix['index'] == k]['simplified_names']
+    if len(matches) == 0:
+        return 'unknown polymer'
+    return matches.values[0]
 
 def pearson_rs(p):
     def normp_pearson(q):
