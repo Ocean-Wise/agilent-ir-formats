@@ -1,169 +1,103 @@
 # agilent-ir-formats
 
-## Agilent File Format Handling for Infrared Spectroscopy
-Author: Alex Henderson <[alex.henderson@manchester.ac.uk](alex.henderson@manchester.ac.uk)>              
-Version: 0.2.0  
-Copyright: (c) 2018-2023 Alex Henderson   
+Python tooling for **Agilent FTIR** hyperspectral files, used by Ocean Wise lab staff (admin: Stephanie Wang) to mass-review, edit, and analyse FTIR microplastic projects across many sample sessions.
 
-## About ##
-Python package to read hyperspectral image files produced by infrared spectroscopy instrumentation from Agilent Technologies, Inc.
-  
-Currently, the code reads single or multi-tile images (*.seq files or *.dmt files) 
+Upstream reader: [Alex Henderson / University of Manchester](https://github.com/AlexHenderson/agilent-ir-formats) (MIT). This fork adds lab batch morphology analysis, polymer library matching, and a durable folder layout for session data.
 
-## Help information
-``` python
-Class to open, read and export the contents of an Agilent Fourier Transform Infrared (FTIR) microscopy file.
+## Start here
 
-FTIR instruments from Agilent Technologies Inc., that use a focal plane array detector, can store hyperspectral
-images in single 'tile' or multi-tile 'mosaic' file formats. This class can read both single and multi-tile images.
-Files with a filename extension of *.seq or *.dmt are compatible.
+| Doc | When to use it |
+|-----|----------------|
+| [Lab workflow](docs/guides/lab-workflow.md) | Day-to-day: drop scans → run batch → review CSV |
+| [Batch morphology](docs/guides/batch-morphology.md) | Inputs, outputs, CLI flags, algorithm notes |
+| [Reading Agilent files](docs/guides/reading-agilent-files.md) | Using `AgilentIRFile` in Python |
+| [Inputs & outputs](docs/reference/inputs-and-outputs.md) | What belongs in `inputs/` vs `outputs/` |
+| [CSV contracts](docs/reference/csv-contracts.md) | Result and library column meanings |
+| [Folder structure](docs/reference/folder-structure.md) | Where code, data, and docs live |
+| [CONTRIBUTING](CONTRIBUTING.md) | PRs, branches, reviews — **do not commit straight to `main`** |
+| [AGENTS](AGENTS.md) | Rules for AI agents working in this repo |
 
-The class has properties and methods allowing the user to explore the numeric values in the file. In addition, some
-metadata values are also accessible.
+## Quick start (lab technicians)
 
-Properties:
-    wavenumbers     x-axis values of the spectral dimension.
-    data            spectral intensities of the hyperspectral data as a 3D object (height, width, datapoints).
-    total_spectrum  sum of intensity in all pixels, as a function of wavenumber.
-    total_image     sum of intensity in all pixels as a function of position (height, width).
-    metadata        simple metadata relating to these data.
-    hdf5_metadata   metadata arranged into a hierarchy for use in HDF5 export of these data.
+1. **Install once** (Python ≥ 3.10):
 
-Methods:
-    read()          open and parse a file.
-    export_hdf5()   create a representation on disc of the file in the HDF5 file format.
+   ```bash
+   python -m venv .venv
+   source .venv/bin/activate          # Windows: .venv\Scripts\activate
+   pip install -e ".[dev]"
+   ```
 
-Static methods:
-    filetype()      string identifying the type of files this class reads.
-    filefilter()    string identifying the Windows file extensions for files this class can read.
-    isreadable()    whether this class is capable of reading a given file.
-    version()       the version number of this code.
+2. **Drop session data** into `inputs/` (gitignored). Keep each Agilent project folder intact (`.dmt` plus companion files).
+
+3. **Run batch analysis**:
+
+   ```bash
+   # Interactive (defaults to inputs/)
+   python scripts/batch_morphology_analysis.py
+
+   # Or non-interactive
+   python scripts/batch_morphology_analysis.py --non-interactive
+
+   # Windows: double-click scripts\run_analysis.bat
+   ```
+
+4. **Open results** under `outputs/` (gitignored), e.g. `outputs/simplified_particle_results.csv`.
+
+5. **Summarize** (optional):
+
+   ```bash
+   python scripts/analyze_results.py
+   ```
+
+Polymer matching libraries live in `data/libraries/` (tracked). Sample result CSVs for docs/tests live in `data/fixtures/`.
+
+Pull requests run lint + tests via [`.github/workflows/pr.yml`](.github/workflows/pr.yml). Locally: `ruff check src scripts tests && pytest -q`.
+
+## Repo layout
+
+```
+agilent-ir-formats/
+├── inputs/                 ← session .dmt projects (gitignored)
+├── outputs/                ← analysis CSVs / plots (gitignored)
+├── data/
+│   ├── libraries/          ← Open Specy + cluster libraries (tracked)
+│   └── fixtures/           ← small example CSVs (tracked)
+├── src/agilentirformats/   ← installable Python package
+├── scripts/                ← lab CLIs + Windows launcher
+│   └── legacy/             ← one-off patch / timing scripts
+├── notebooks/              ← exploratory analysis
+├── docs/                   ← guides + reference
+└── tests/
 ```
 
-## Simplified Morphology + Spectroscopy  in Batch
+## Safety — what never gets committed
 
-This repository includes a batch processing script for automated microplastic particle analysis from Agilent IR hyperspectral data.
+- Raw Agilent scans and project folders (`inputs/`)
+- Analysis dumps, plots, and session CSVs (`outputs/`)
+- Virtualenvs (`.venv/`, `.conda/`), secrets (`.env`)
 
-### Features
+Reference libraries under `data/libraries/` **are** committed so the matching pipeline works out of the box.
 
-- **Batch Processing**: Automatically finds and processes all .dmt files in a directory
-- **Smart Thresholding**: Uses `mean + 2*std` for robust particle segmentation
-- **Spectral Analysis**: PCA-based spectrum reduction and polymer identification
-- **Physical Measurements**: Converts pixel counts to actual area (μm² and mm²)
-- **Multi-file Support**: Processes multiple .dmt files and combines results
-
-### Configuration
-
-Edit the `DEFAULT_DATA_PATH` variable at the top of `batch_simplified_morphology_analysis.py`:
+## Upstream file reader
 
 ```python
-# Set your default directory path here (change this to your local drive path)
-DEFAULT_DATA_PATH = r"C:\Users\Stephanie.Wang\Downloads"  # Modify this path
-```
-
-### Quick Start
-
-#### Option 1: Double-click launcher (Windows)
-1. Double-click `run_analysis.bat`
-2. Press Enter to use the default path, or enter a custom directory path
-3. Wait for processing to complete
-
-#### Option 2: Command line
-```bash
-# Use default path (press Enter when prompted)
-python batch_simplified_morphology_analysis.py
-
-# Process all .dmt files in a directory (output saved to that directory)
-python batch_simplified_morphology_analysis.py --input "C:\path\to\directory"
-
-# Process a single file
-python batch_simplified_morphology_analysis.py --input "C:\path\to\file.dmt"
-
-# Custom output location
-python batch_simplified_morphology_analysis.py --input "C:\data" --output "C:\results\my_results.csv"
-```
-
-### Output Format
-
-The CSV output includes:
-- `dmt_file`: Name of the source .dmt file
-- `label`: Particle ID within that file
-- `polymer`: Identified polymer type
-- `best_pr`: Confidence score (0-1)
-- `pixel_count`: Number of pixels in the particle
-- `area_um2`: Physical area in square microns
-- `area_mm2`: Physical area in square millimeters
-
-### Algorithm Details
-
-1. **Data Loading**: Extracts hyperspectral cube and total absorbance image
-2. **Thresholding**: `threshold = mean(image) + 2 * std(image)`
-3. **Segmentation**: Connected component analysis to identify particles
-4. **Spectral Processing**: PCA reduction to representative spectrum per particle
-5. **Identification**: Correlation matching against polymer library
-6. **Area Calculation**: Pixel count × (pixel_size)² where pixel_size = 64 μm
-
-## Usage ##
-### Example 1 ###
-Open a file and display simple metadata. 
-
-``` python
-from pprint import pprint   # only for this example
-
+from pprint import pprint
 from agilentirformats import AgilentIRFile
-
-filename = r"C:\mydata\myfile\myfile.dmt"
 
 reader = AgilentIRFile()
-reader.read(filename)
+reader.read(r"inputs/my_project/myfile.dmt")
 
-xvalues = reader.xvalues
-intensities = reader.intensities
-metadata = reader.metadata
-
-print(xvalues.shape)
-print(intensities.shape)
-pprint(metadata)
-
-# output...
-
-(728,)
-(128, 256, 728)
-{'acqdatetime': '2023-05-11T14:37:02',
- 'filename': WindowsPath('C:/mydata/myfile/myfile.dmt'),
- 'firstwavenumber': 898.6699159145355,
- 'fpasize': 128,
- 'lastwavenumber': 3702.674331665039,
- 'numpts': 728,
- 'xlabel': 'wavenumbers (cm-1)',
- 'xpixels': 256,
- 'xtiles': 2,
- 'ylabel': 'absorbance',
- 'ypixels': 128,
- 'ytiles': 1}
-```    
-### Example 2 ###
-Convert a file to HDF5 format in the same location.
-
-``` python
-from agilentirformats import AgilentIRFile
-
-filename = r"C:\mydata\myfile\myfile.dmt"
-
-AgilentIRFile(filename).export_hdf5()
+print(reader.xvalues.shape)
+print(reader.intensities.shape)
+pprint(reader.metadata)
 ```
 
-## Requirements ##
-* python >= 3.10  
-* h5py
-* numpy
+Requirements for the reader alone: `python >= 3.10`, `h5py`, `numpy`. Full lab tooling also needs `pandas`, `scikit-learn`, `scikit-image`, `scipy` (installed via `pip install -e .`).
 
-## Licence conditions ##
-Copyright (c) 2018-2023 Alex Henderson (alex.henderson@manchester.ac.uk)   
-Licensed under the MIT License. See https://opensource.org/licenses/MIT      
-SPDX-License-Identifier: MIT   
-Visit https://github.com/AlexHenderson/agilent-ir-formats/ for the most recent version  
+## Licence
 
----
-### See also:  
-* MATLAB code available here: [https://bitbucket.org/AlexHenderson/agilent-file-formats/](https://bitbucket.org/AlexHenderson/agilent-file-formats/)
+Copyright (c) 2018–2023 Alex Henderson — MIT. See [LICENSE](LICENSE).  
+Ocean Wise lab scripts and documentation in this repository follow the same MIT licence unless noted otherwise.
+
+Upstream: https://github.com/AlexHenderson/agilent-ir-formats  
+MATLAB sibling: https://bitbucket.org/AlexHenderson/agilent-file-formats/

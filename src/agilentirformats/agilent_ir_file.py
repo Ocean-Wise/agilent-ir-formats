@@ -11,13 +11,12 @@
 
 __version__ = "0.2.0"
 
-from datetime import datetime
-from enum import Enum
 import math
-from pathlib import Path
 import re
 import struct
-from typing import Optional
+from datetime import datetime
+from enum import Enum
+from pathlib import Path
 
 import h5py
 import numpy as np
@@ -123,21 +122,21 @@ class AgilentIRFile:
         :raises RuntimeError: Raised if the file is of a format that cannot be read.
         """
         self._datatype = np.dtype('<f')  # little-endian single-precision float
-        self._tile_or_mosaic: Optional[AgilentIRFile.TileOrMosaic] = None
-        self._num_datapoints: Optional[int] = None
-        self._first_wavenumber: Optional[float] = None
-        self._wavenumber_step: Optional[float] = None
-        self._last_wavenumber: Optional[float] = None
-        self._wavenumbers: Optional[np.ndarray] = None
-        self._num_xtiles: Optional[int] = None
-        self._num_ytiles: Optional[int] = None
-        self._fpa_size: Optional[int] = None
-        self._num_xpixels: Optional[int] = None
-        self._num_ypixels: Optional[int] = None
-        self._data: Optional[np.ndarray] = None
-        self._totalimage: Optional[np.ndarray] = None
-        self._totalspectrum: Optional[np.ndarray] = None
-        self._acquisition_datetime: Optional[datetime] = None
+        self._tile_or_mosaic: AgilentIRFile.TileOrMosaic | None = None
+        self._num_datapoints: int | None = None
+        self._first_wavenumber: float | None = None
+        self._wavenumber_step: float | None = None
+        self._last_wavenumber: float | None = None
+        self._wavenumbers: np.ndarray | None = None
+        self._num_xtiles: int | None = None
+        self._num_ytiles: int | None = None
+        self._fpa_size: int | None = None
+        self._num_xpixels: int | None = None
+        self._num_ypixels: int | None = None
+        self._data: np.ndarray | None = None
+        self._totalimage: np.ndarray | None = None
+        self._totalspectrum: np.ndarray | None = None
+        self._acquisition_datetime: datetime | None = None
         self._file_has_been_read: bool = False
 
         if filename:
@@ -259,7 +258,7 @@ class AgilentIRFile:
 
             self._wavenumbers = np.arange(1, (first_wavenumber_index + self._num_datapoints))
             self._wavenumbers = self._wavenumbers * self._wavenumber_step
-            self._wavenumbers = np.delete(self._wavenumbers, range(0, first_wavenumber_index - 1))
+            self._wavenumbers = np.delete(self._wavenumbers, range(first_wavenumber_index - 1))
 
             self._first_wavenumber = self._wavenumbers[0]
             self._last_wavenumber = self._wavenumbers[-1]
@@ -278,7 +277,7 @@ class AgilentIRFile:
 
         # Read in the whole file (it's small) and regex it for the acquisition date/time.
         file_contents = filename.read_bytes()
-        regex = re.compile(b"Time Stamp.{44}\w+, (\w+) (\d\d), (\d\d\d\d) (\d\d):(\d\d):(\d\d)")
+        regex = re.compile(rb"Time Stamp.{44}\w+, (\w+) (\d\d), (\d\d\d\d) (\d\d):(\d\d):(\d\d)")
         matches = re.search(regex, file_contents)
 
         if matches:
@@ -406,6 +405,8 @@ class AgilentIRFile:
             self._totalspectrum = self._data
 
         self._file_has_been_read = True
+
+        return self._data
 
     def _generate_hdf5_metadata(self) -> dict[str, any]:
         """Return a `dict` containing metadata parameters that can be used for the HDF5 file format.
