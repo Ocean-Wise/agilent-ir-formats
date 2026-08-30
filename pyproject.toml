@@ -1,0 +1,58 @@
+[project]
+name = "agilentirformats"
+version = "0.3.0"
+description = "Read Agilent FTIR hyperspectral files and run Ocean Wise lab morphology / polymer analysis"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+  { name = "Alex Henderson", email = "alex.henderson@manchester.ac.uk" },
+]
+maintainers = [
+  { name = "Ocean Wise" },
+]
+dependencies = [
+  "numpy>=1.24",
+  "h5py>=3.8",
+  "pandas>=2.0",
+  "scikit-learn>=1.3",
+  "scikit-image>=0.21",
+  "scipy>=1.10",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+  "ruff>=0.8.0",
+]
+
+[project.scripts]
+agilent-batch-morphology = "agilentirformats.cli_batch:main"
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+extend-exclude = ["scripts/legacy", "notebooks"]
+
+[tool.ruff.lint]
+# Keep CI focused; upstream reader has style debt we should not churn in every PR.
+select = ["E", "F", "I", "B", "UP"]
+ignore = [
+  "EXE001",  # shebang OK for `python scripts/...` on Windows
+  "E501",    # line length handled softly via formatter preference
+  "B008",    # function calls in defaults appear in argparse helpers
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

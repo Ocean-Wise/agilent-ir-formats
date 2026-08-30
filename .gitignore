@@ -1,0 +1,38 @@
+# Python
+.venv/
+venv/
+.conda/
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+dist/
+build/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# Secrets / local env
+.env
+.env.*
+!.env.example
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Session data — never commit lab scans or analysis dumps
+inputs/*
+!inputs/.gitkeep
+!inputs/README.md
+
+outputs/*
+!outputs/.gitkeep
+!outputs/README.md
+
+# Keep reference libraries and fixtures under data/ tracked
